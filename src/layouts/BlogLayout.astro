@@ -1,0 +1,15 @@
+---
+import Layout from "./Layout.astro";
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="blog-layout"><slot /></div>
+</Layout>
+
+<style>
+  .blog-layout {
+    margin: 0 5vw;
+  }
+</style>

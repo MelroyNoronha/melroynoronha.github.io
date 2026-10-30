@@ -1,23 +1,20 @@
 :root {
   --dark: #332f2f;
   --light: #fff;
-}
-
-html,
-body {
   --fg: var(--dark);
   --bg: var(--light);
+}
+
+[data-theme="dark"] {
+  --fg: var(--light);
+  --bg: var(--dark);
+}
+
+body {
+  font-family: "Glory", sans-serif;
   color: var(--fg);
   background: var(--bg);
   word-spacing: 3.14px;
   line-height: 1.8;
   letter-spacing: 1px;
-}
-
-[data-theme="dark"],
-[data-theme="dark"] body {
-  --fg: var(--light);
-  --bg: var(--dark);
-  color: var(--fg);
-  background: var(--bg);
 }

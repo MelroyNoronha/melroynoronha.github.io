@@ -1,0 +1,55 @@
+---
+import { getCollection, render } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogLayout title={post.data.title}>
+  <main>
+    <header>
+      <h1>{post.data.title}</h1>
+      <FormattedDate date={post.data.date} />
+    </header>
+    <hr />
+    <section class="content">
+      <Content />
+    </section>
+  </main>
+</BlogLayout>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    font-size: large;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+  }
+
+  .content :global(img) {
+    border: 2px solid var(--fg);
+    padding: 2px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
