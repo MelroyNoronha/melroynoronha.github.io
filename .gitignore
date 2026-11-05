@@ -10,9 +10,8 @@ TODO
 /coverage
 
 # production and build
-/build
-.next
-out
+/dist
+.astro
 
 # misc
 .DS_Store

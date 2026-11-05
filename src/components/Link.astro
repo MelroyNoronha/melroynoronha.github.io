@@ -1,0 +1,22 @@
+---
+const { href, external = false, class: className } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={["link", className]}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}><slot /></a
+>
+
+<style>
+  .link {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .link:active {
+    opacity: 0.5;
+  }
+</style>
