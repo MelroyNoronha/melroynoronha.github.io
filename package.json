@@ -1,19 +1,16 @@
 {
-  "name": "portfolio-site",
-  "version": "1.0.0",
-  "description": "Melroy Noronha's Portfolio Site",
-  "main": "index.js",
+  "name": "my-website",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MelroyNoronha/Portfolio-site.git"
-  },
-  "author": "Melroy Noronha",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MelroyNoronha/Portfolio-site/issues"
-  },
-  "homepage": "https://github.com/MelroyNoronha/Portfolio-site#readme"
+  "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.6",
+    "astro": "^7.4.1"
+  }
 }

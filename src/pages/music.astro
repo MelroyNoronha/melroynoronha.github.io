@@ -1,0 +1,34 @@
+---
+import BlogLayout from "../layouts/BlogLayout.astro";
+import { URLS } from "../constants";
+---
+
+<BlogLayout title="Music">
+  <h1>Projects</h1>
+
+  <section>
+    <h2>Mel and the Dragon</h2>
+    <p>
+      This project started after I abandoned{" "}
+      <a href={URLS.tronicDisease} target="_blank">tronicDisease</a> in search of
+      a new sound. A lot of the tracks came to me during the 2020 lockdown. By
+      this time I was a full time software engineer and only able to work on
+      music when I had downtime. As of 2026 this project is still going at a
+      steady pace of 1 release per year. It's not much but it's honest work. The
+      sound is a mix of hip hop, r&b and maybe a sprinkle of rock, also UK drill
+      which I'm a sucker for.
+    </p>
+  </section>
+
+  <section id="tronicDisease">
+    <h2>tronicDisease</h2>
+    <p>
+      This project contains the first set of tracks that I ever released on the
+      internet. As the name suggests, it has a very electronic sound to it that
+      comes from a mish mash of whatever inspired me at the time. It's kind of a
+      time capsule because I don't think I'll be able to recreate that same sound
+      again. Sometimes I listen back to this and wonder what the hell I was on
+      when I came up with these tracks.
+    </p>
+  </section>
+</BlogLayout>

@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+import { URLS } from "../constants";
+---
+
+<Layout title="Melroy Noronha">
+  <main>
+    <h1>Melroy Noronha</h1>
+
+    <section>
+      <p class="intro">
+        I'm a creator at heart. <br />
+        I stumbled into web and app development as a university student and
+        turned it into a career in software engineering.
+        <br />
+        I've created beautiful software for multiple early and late stage
+        startups.
+      </p>
+      <p class="intro">
+        When I'm not coding, I'm usually listening to music or working on music
+        projects like
+        <br />
+        <Link href={URLS.tronicDisease} external>tronicDisease</Link>
+        &nbsp;and&nbsp;
+        <Link href={URLS.melAndTheDragon} external>Mel and the Dragon</Link>.
+      </p>
+    </section>
+
+    <section class="links">
+      <Link class="x-large" href={URLS.github} external>Github</Link>
+      <Link class="x-large" href={URLS.blog}>Blog</Link>
+      <Link class="x-large" href={URLS.music}>Music</Link>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .intro {
+    width: 75vw;
+    text-align: center;
+    font-size: larger;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+  }
+
+  .links :global(.x-large) {
+    font-size: x-large;
+  }
+</style>

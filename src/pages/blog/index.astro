@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import Link from "../../components/Link.astro";
+import { URLS } from "../../constants";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BlogLayout title="Melroy Noronha's Blogs">
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <Link class="post-link" href={`${URLS.blog}/${post.id}`}>
+            {post.data.title}
+          </Link>
+        </li>
+      ))
+    }
+  </ul>
+</BlogLayout>
+
+<style>
+  ul,
+  li {
+    all: unset;
+  }
+
+  li {
+    display: block;
+    margin: 5vh 0;
+  }
+
+  li :global(.post-link) {
+    font-size: x-large;
+  }
+</style>
