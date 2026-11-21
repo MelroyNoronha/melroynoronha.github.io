@@ -14,7 +14,4 @@ body {
   font-family: "Glory", sans-serif;
   color: var(--fg);
   background: var(--bg);
-  word-spacing: 3.14px;
-  line-height: 1.8;
-  letter-spacing: 1px;
 }
