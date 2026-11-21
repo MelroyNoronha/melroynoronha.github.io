@@ -1,17 +1,32 @@
 :root {
-  --dark: #332f2f;
+  --dark: #212a2e;
   --light: #fff;
   --fg: var(--dark);
   --bg: var(--light);
 }
 
+[data-theme="light"] {
+  --fg: var(--dark);
+  --bg: var(--light);
+  --link-color: #543fd7;
+}
+
 [data-theme="dark"] {
   --fg: var(--light);
   --bg: var(--dark);
+  --link-color: #b4a8ff;
 }
 
 body {
   font-family: "Glory", sans-serif;
   color: var(--fg);
   background: var(--bg);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  filter: brightness(80%);
 }
