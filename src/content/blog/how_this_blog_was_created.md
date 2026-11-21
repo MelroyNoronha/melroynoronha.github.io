@@ -39,7 +39,7 @@ Building out the simple blog site from the tutorial gave me enough confidence to
 
 I needed two pages:
 1. A `/blog` page that lists out the links to all the posts that have been published.
-To implement this I had to create a `blog` directory along with an `index.tsx` component which would be rendered when the user visits [www.melroynoronha.online/blog](https://www.melroynoronha.online/blog/hello_world).
+To implement this I had to create a `blog` directory along with an `index.tsx` component which would be rendered when the user visits [https://melroynoronha.github.io/blog](https://melroynoronha.github.io/blog).
 
 2. A page to show the blog that the user clicked on.
 To implement this I had to create a [dynamic route](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes). This dynamic route would be something like `/blog/[id]` where `id` would be the name of the markdown file that contains the full contents of the blog post. I created the `pages/blog/[id]` directory, which is one way of creating dynamic routes in a Next.js app. The `index.tsx` component under a dynamic route receives the URL params as a prop, in our case that would be `id`. This `id` could then be used to fetch the contents of the blog from a markdown file and render them on the page.
