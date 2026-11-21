@@ -18,9 +18,14 @@ const { title } = Astro.props;
     />
     <!-- runs before paint so the saved/system theme applies without a flash -->
     <script is:inline>
-      document.documentElement.dataset.theme =
-        localStorage.getItem("theme") ??
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      function applyTheme() {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("theme") ??
+          (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }
+      applyTheme();
+      // back/forward cache restores the page without rerunning this script
+      addEventListener("pageshow", (e) => e.persisted && applyTheme());
     </script>
   </head>
   <body>
