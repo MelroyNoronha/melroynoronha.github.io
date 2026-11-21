@@ -58,4 +58,10 @@ I deployed the app using [Vercel](https://vercel.com/), which makes Next.js app 
 
 And that's the story of how this blog was born.
 
-![](https://github.com/MelroyNoronha/my-website/assets/16273203/373892d9-7b48-4b21-9728-deb7cd4567d6)
+____
+
+### Update 21st Novemeber 2026
+
+I have ended up migrating the entire website from Next.js to Astro. I mainly did it because of Astro's lighter footprint and because Claude code made the migration very easy to do.
+The original setup is completely outdated now but I'll keep it around to serve as a historical record. I would like to do a quick post on the migration as soon as I can find the time to do it.
+
